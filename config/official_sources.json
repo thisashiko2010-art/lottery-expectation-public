@@ -1,0 +1,16 @@
+{
+  "games": {
+    "miniloto": "https://www.mizuhobank.co.jp/takarakuji/check/loto/miniloto/index.html",
+    "loto6": "https://www.mizuhobank.co.jp/takarakuji/check/loto/loto6/index.html",
+    "loto7": "https://www.mizuhobank.co.jp/takarakuji/check/loto/loto7/index.html",
+    "numbers3": "https://www.mizuhobank.co.jp/takarakuji/check/numbers/numbers3/index.html",
+    "numbers4": "https://www.mizuhobank.co.jp/takarakuji/check/numbers/numbers4/index.html",
+    "bingo5": "https://www.mizuhobank.co.jp/takarakuji/check/bingo/index.html"
+  },
+  "policy": {
+    "requests_per_run": 6,
+    "timeout_seconds": 25,
+    "user_agent": "LotteryResearchDataProbe/0.6",
+    "max_retries": 1
+  }
+}
