@@ -1,0 +1,35 @@
+name: Official Source Probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install requests beautifulsoup4
+
+      - name: Run official source probe
+        run: |
+          python src/probe_sources.py
+
+      - name: Save probe results
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-source-probe
+          path: data/official_probe/
+          if-no-files-found: error
